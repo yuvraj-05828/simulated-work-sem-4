@@ -1,29 +1,46 @@
+body {
+  text-align: center;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+}
+
 .grid {
-    position: absolute;
-    width: 560px;
-    height: 300px;
-    border: solid 1px black;
-    margin-top: 100px;
-  }
-  
-  .user {
-    position: absolute;
-    width: 100px;
-    height: 20px;
-    background-color: blueviolet;
-  }
-  
-  .block {
-    position: absolute;
-    width: 100px;
-    height: 20px;
-    background-color: blue;
-  }
-  
-  .ball {
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    border-radius: 10px;
-    background-color: red;
-  }
+  position: relative;
+  width: 560px;
+  height: 300px;
+  border: solid 2px black;
+  margin: 50px auto;
+  background-color: lightgray;
+  overflow: hidden;
+}
+
+.user {
+  position: absolute;
+  width: 100px;
+  height: 20px;
+  background-color: blueviolet;
+  border-radius: 10px;
+  transition: left 0.1s ease-in-out;
+}
+
+.block {
+  position: absolute;
+  width: 100px;
+  height: 20px;
+  background-color: blue;
+  border-radius: 5px;
+  transition: opacity 0.2s ease-out;
+}
+
+.fade-out {
+  opacity: 0;
+}
+
+.ball {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: red;
+  transition: all 0.03s linear;
+}
